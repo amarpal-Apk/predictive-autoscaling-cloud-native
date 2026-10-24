@@ -1,18 +1,21 @@
 # Intelligent Cloud-Native Autoscaling
 
-This repository is organized for an intelligent cloud-native autoscaling project. The current implementation is the Java 17/Spring Boot order service; the ML prediction service, scaling controller, monitoring, and Kubernetes deployment directories are prepared for future work.
+This repository is organized for an intelligent cloud-native autoscaling project. The current implementation is the Java 17/Spring Boot order service. The API gateway, catalog service, ML components, monitoring, and Kubernetes deployment directories are prepared for future work.
 
 ## Repository layout
 
 - `services/order-service/` — Spring Boot REST API, PostgreSQL persistence, and tests.
+- `services/api-gateway/` — API gateway service.
+- `services/catalog-service/` — product catalog service.
 - `infrastructure/docker/` — Docker Compose deployment for PostgreSQL and the order service.
-- `infrastructure/monitoring/` — Prometheus and Grafana configuration.
+- `infrastructure/monitoring/` — monitoring configuration.
 - `infrastructure/kubernetes/` — Kubernetes manifests.
-- `ml/` — datasets, training, and prediction service.
-- `scaling-controller/` — autoscaling controller.
+- `ml/training/` — model training code.
+- `ml/prediction-service/` — model inference service.
+- `ml/scaling-controller/` — autoscaling controller.
 - `load-tests/k6/` — k6 load tests.
 - `experiments/` — datasets and experiment results.
-- `docs/` — architecture, research, diagrams, and progress documentation.
+- `docs/` — architecture, research, and progress documentation.
 - `.github/` — workflow and issue-template configuration.
 
 ## Order service
