@@ -71,6 +71,8 @@ The API listens on `http://localhost:8080`.
 | `GET` | `/api/orders` | List orders |
 | `GET` | `/api/test` | Basic service test endpoint |
 | `GET` | `/actuator/health` | Health status |
+| `GET` | `/actuator/info` | Application information |
+| `GET` | `/actuator/metrics` | Available application metrics |
 | `GET` | `/actuator/prometheus` | Prometheus metrics |
 
 Create an order from PowerShell:
@@ -92,6 +94,8 @@ Check health and metrics:
 
 ```powershell
 Invoke-RestMethod -Uri http://localhost:8080/actuator/health
+Invoke-RestMethod -Uri http://localhost:8080/actuator/info
+Invoke-RestMethod -Uri http://localhost:8080/actuator/metrics
 Invoke-WebRequest -Uri http://localhost:8080/actuator/prometheus
 ```
 
