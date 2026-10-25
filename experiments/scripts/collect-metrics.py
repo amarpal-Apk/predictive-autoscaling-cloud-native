@@ -27,6 +27,12 @@ QUERIES = {
     "total_requests": """
         sum(http_server_requests_seconds_count{job="order-service"})
     """,
+    "process_cpu_usage": """
+        process_cpu_usage{job="order-service"}
+    """,
+    "system_cpu_usage": """
+        system_cpu_usage{job="order-service"}
+    """,
 }
 
 
