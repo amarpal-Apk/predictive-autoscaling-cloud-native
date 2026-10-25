@@ -1,0 +1,9 @@
+experiment,model,train_samples,test_samples,mae_rps,rmse_rps
+constant,previous_sample,25,11,0.391802,0.41588
+constant,moving_average_3,25,11,0.725158,0.788579
+periodic,previous_sample,25,11,0.161949,0.166214
+periodic,moving_average_3,25,11,0.271566,0.29317
+ramp-up,previous_sample,25,11,0.623232,0.842447
+ramp-up,moving_average_3,25,11,1.340143,1.663499
+spike,previous_sample,25,11,0.945574,1.227241
+spike,moving_average_3,25,11,2.119849,2.611031
