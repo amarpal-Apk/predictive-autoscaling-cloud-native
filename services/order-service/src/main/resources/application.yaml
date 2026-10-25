@@ -22,5 +22,8 @@ management:
     health:
       show-details: never
   metrics:
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
     tags:
       application: order-service
