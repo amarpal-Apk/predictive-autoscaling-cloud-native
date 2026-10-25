@@ -57,11 +57,19 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     experiment = input(
-        "Experiment label (constant/ramp-up/spike/periodic): "
+        "Experiment label (constant/constant-5m/ramp-up/spike/periodic): "
     ).strip().lower()
 
-    if experiment not in {"constant", "ramp-up", "spike", "periodic"}:
-        raise ValueError("Use constant, ramp-up, spike, or periodic.")
+    if experiment not in {
+        "constant",
+        "constant-5m",
+        "ramp-up",
+        "spike",
+        "periodic",
+    }:
+        raise ValueError(
+            "Use constant, constant-5m, ramp-up, spike, or periodic."
+        )
 
     duration = int(input("Collection duration in seconds (e.g. 180): "))
     interval = 5
